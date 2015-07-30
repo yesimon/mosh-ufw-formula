@@ -18,12 +18,14 @@ ufw-ssh:
     - name: ufw allow ssh
     - require:
       - pkg: ufw
+      - pkg: openssh
 
 ufw-mosh:
   cmd.run:
-    - name: ufw allow 60000:61000/udp
+    - name: ufw allow mosh
     - require:
       - pkg: ufw
+      - pkg: mosh
 
 ufw-enable:
   cmd.run:
