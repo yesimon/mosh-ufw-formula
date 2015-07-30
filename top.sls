@@ -1,0 +1,6 @@
+base:
+  '*':
+    - openssh
+    - mosh
+    - ufw
+
